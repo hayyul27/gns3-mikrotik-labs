@@ -46,10 +46,10 @@ Satu link memakai satu network. Subnet /30 dipilih karena hanya membutuhkan dua 
 | PC | Router | Alamat | Gateway |
 | --- | --- | --- | --- |
 | PC1 | R1 | `192.168.10.10/24` | `192.168.10.1` |
-| PC2 | R1 | `192.168.10.11/24` | `192.168.10.1` |
+| PC2 | R1 | `192.168.10.9/24` | `192.168.10.1` |
 | PC3 | R2 | `192.168.20.10/24` | `192.168.20.1` |
 | PC4 | R3 | `192.168.30.10/24` | `192.168.30.1` |
-| PC5 | R3 | `192.168.30.11/24` | `192.168.30.1` |
+| PC5 | R3 | `192.168.30.9/24` | `192.168.30.1` |
 
 ## 4. Informasi Umum
 
@@ -108,10 +108,10 @@ R2 memiliki tiga alamat, satu per interface, karena menghadap dua router dan sat
 
 ```
 PC1> ip 192.168.10.10/24 192.168.10.1
-PC2> ip 192.168.10.11/24 192.168.10.1
+PC2> ip 192.168.10.9/24 192.168.10.1
 PC3> ip 192.168.20.10/24 192.168.20.1
 PC4> ip 192.168.30.10/24 192.168.30.1
-PC5> ip 192.168.30.11/24 192.168.30.1
+PC5> ip 192.168.30.9/24 192.168.30.1
 ```
 
 Jalankan `save` di tiap PC setelah mengatur alamat.
@@ -183,18 +183,18 @@ Di R1, R2, dan R3:
 Pastikan router ID sesuai rencana (`1.1.1.1`, `2.2.2.2`, `3.3.3.3`) dan state tetangga `Full`. R1 dan R3 masing-masing punya satu tetangga (R2), sedangkan R2 punya dua tetangga (R1 dan R3).
 
 **R1**
-ospf-ins-r1.png
-![OSPF di R1](ospf-ins-r1.png)
+
+![OSPF ins R1](images/ospf-ins-r1.png)
 ![OSPF di R1](images/ospf-status-r1.png)
 
 **R2**
 
-![OSPF di R2](ospf-ins-r2.png)
+![OSPF ins R2](images/ospf-ins-r2.png)
 ![OSPF di R2](images/ospf-status-r2.png)
 
 **R3**
 
-![OSPF di R3](ospf-ins-r3.png)
+![OSPF ins R3](images/ospf-ins-r3.png)
 ![OSPF di R3](images/ospf-status-r3.png)
 
 ### b. Route hasil OSPF
